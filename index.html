@@ -97,6 +97,71 @@
         .navbar-text {
             font-size: 48px;
         }
+        .navbar-toggler {
+            height: 30px; /* Встановлюємо висоту кнопки */
+        }
+
+        .burger-icon {
+            display: block;
+            width: 30px;
+            height: 3px;
+            background-color: #fff;
+            position: relative;
+        }
+
+        .burger-icon::before,
+        .burger-icon::after {
+            content: '';
+            width: 100%;
+            height: 100%;
+            background-color: #fff;
+            position: absolute;
+            left: 0;
+        }
+
+        .burger-icon::before {
+            top: -10px;
+        }
+
+        .burger-icon::after {
+            bottom: -10px;
+        }
+
+        .card-body {
+            background-color: #171717;
+        }
+
+        .btn-transparent-white {
+            background-color: transparent;
+            border: 2px solid #ffffff; /* Біла обводка */
+            color: #ffffff; /* Білий колір тексту */
+        }
+
+        .btn-transparent-white:hover {
+            background-color: rgba(255, 255, 255, 0.1); /* Прозорий колір при наведенні */
+            color: #ffffff; /* Білий колір тексту при наведенні */
+        }
+
+        .jumbotron .text-content {
+            position: relative;
+            z-index: 2; /* Задаємо велике значення z-index для тексту */
+        }
+
+        .jumbotron::before,
+        .jumbotron::after {
+            /* Ваші поточні стилі */
+            z-index: 1; /* Задаємо менше значення z-index для затемнення */
+        }
+
+        .transparent-white-line {
+            height: 2px; /* Высота линии */
+            width: 100%; /* Ширина линии */
+            background-color: rgba(255, 255, 255, 0.5); /* Прозрачный белый цвет */
+        }
+
+        div.container p {
+            font-size: 20px;
+        }
     </style>
 </head>
 <body>
@@ -110,20 +175,21 @@
                     <span class="navbar-text">Маг Карим</span>
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
+                    <span class="burger-icon"></span>
                 </button>
+
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ml-auto">
-                        <li class="nav-item active">
+                        <li class="nav-item mr-3">
                             <a class="nav-link" href="#about">Обо мне</a>
                         </li>
-                        <li class="nav-item">
+                        <li class="nav-item mr-3">
                             <a class="nav-link" href="#services">Услуги</a>
                         </li>
-                        <li class="nav-item">
+                        <li class="nav-item mr-3">
                             <a class="nav-link" href="#contact">Отзывы</a>
                         </li>
-                        <li class="nav-item">
+                        <li class="nav-item mr-3">
                             <a class="nav-link" href="#contact">Контакты</a>
                         </li>
                     </ul>
@@ -143,10 +209,10 @@
         <section class="jumbotron">
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col-lg-12 text-center">
-                        <h1 class="display-4">Ласкаво просимо до світу магії</h1>
-                        <p class="lead">Дізнайтеся більше про таємничість, чари та способи освоєння магії.</p>
-                        <a href="#about" class="btn btn-primary btn-lg">Дізнатися більше</a>
+                    <div class="col-lg-12 text-center text-content">
+                        <h1 class="display-4">Меня Зовут Карим</h1>
+                        <p class="lead">Я практикующий маг и экстрасенс.</p>
+                        <a href="#" class="btn btn-transparent-white btn-lg" data-toggle="modal" data-target="#exampleModal">Написать мне</a>
                     </div>
                 </div>
             </div>
@@ -154,33 +220,40 @@
     </div>
 
 
-    <!-- Блок "Послуги" -->
     <div id="services" class="section">
-        <section class="bg-light py-5">
+        <section class="py-5">
             <div class="container">
-                <h2 class="text-center mb-4">Наші послуги</h2>
+                <h2 class="text-center mb-4"></h2>
                 <div class="row">
-                    <div class="col-md-4">
-                        <div class="card">
-                            <div class="card-body">
-                                <h5 class="card-title">Навчання магії</h5>
-                                <p class="card-text">Вивчення базових і складних прийомів магії від наших професіоналів.</p>
-                            </div>
-                        </div>
+                    <div class="col-md-6">
+                        <!-- Вставте зображення тут -->
+                        <img src="pic/colag.jpg" alt="Зображення" class="img-fluid" style="max-height: 400px;">
                     </div>
-                    <div class="col-md-4">
-                        <div class="card">
-                            <div class="card-body">
-                                <h5 class="card-title">Консультації</h5>
-                                <p class="card-text">Індивідуальні консультації з досвідченими магами щодо розвитку вашої магічної практики.</p>
+                    <div class="col-md-6">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="card" style="height: 400px;">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Навчання магії</h5>
+                                        <p class="card-text">Вивчення базових і складних прийомів магії від наших професіоналів.</p>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="card">
-                            <div class="card-body">
-                                <h5 class="card-title">Магічні предмети</h5>
-                                <p class="card-text">Продаж магічних предметів та інструментів для вашої практики.</p>
+                            <div class="col-md-12">
+                                <div class="card" style="height: 400px;">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Консультації</h5>
+                                        <p class="card-text">Індивідуальні консультації з досвідченими магами щодо розвитку вашої магічної практики.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="card" style="height: 400px;">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Магічні предмети</h5>
+                                        <p class="card-text">Продаж магічних предметів та інструментів для вашої практики.</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -188,6 +261,7 @@
             </div>
         </section>
     </div>
+
 
     <!-- Блок "Контакти" -->
     <div id="contact" class="section">
@@ -198,12 +272,46 @@
         </section>
     </div>
 
+    <!-- Прозрачная белая линия -->
+    <div class="transparent-white-line"></div>
+
     <!-- Footer -->
-    <footer class="bg-dark text-white text-center py-4">
+    <footer class="text-center py-4">
         <div class="container">
             <p>&copy;Copyright 2018-2024</p>
         </div>
     </footer>
+    
+    <!-- Модальне вікно -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Написати мені</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <!-- Тут може бути ваша форма зв'язку -->
+                    <form>
+                        <div class="form-group">
+                            <label for="recipient-name" class="col-form-label">Ваше ім'я:</label>
+                            <input type="text" class="form-control" id="recipient-name">
+                        </div>
+                        <div class="form-group">
+                            <label for="message-text" class="col-form-label">Повідомлення:</label>
+                            <textarea class="form-control" id="message-text"></textarea>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрити</button>
+                    <button type="button" class="btn btn-primary">Надіслати</button>
+                </div>
+            </div>
+        </div>
+    </div>
     
     <!-- Підключення FontAwesome для значків -->
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
