@@ -12,7 +12,7 @@
         /* Додайте свої стилі тут */
         body, html {
             height: 100%;
-            background-color: #171717; /* Колір фону */
+            background-color: #000000; /* Колір фону */
             color: #FFFFFF;
             font-family: Open Sans;
         }
@@ -20,32 +20,29 @@
             height: 100vh;
             position: relative;
         }
+        .air{
+            height: 1px;
+            width: 40vh;
+        }
         .jumbotron {
-            position: relative; /* Додано позицію relative */
-            background-image: url('pic/red.png');
             background-size: cover;
             background-position: center;
             color: white;
-            text-shadow: 2px 2px 4px #000000;
             min-height: 100vh; /* Змінено висоту на мінімальну */
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            overflow: hidden; /* Додано для затемнення боків */
+            background-color: #000000;
         }
 
-        /* Додані стилі для затемнення боків */
-        .jumbotron::before,
+       /* Додані стилі для затемнення боків */
+/*        .jumbotron::before,
         .jumbotron::after {
             content: "";
             position: absolute;
             top: 0;
             bottom: 0;
-            width: 50%; /* Затемнюємо половину екрану по боках */
-            background: rgba(0, 0, 0, 0.5); /* Колір затемнення */
-            z-index: 1; /* Визначаємо зіпсовану позицію для затемнення */
+            width: 50%; 
+            background: rgba(0, 0, 0, 0.5); 
+            z-index: 1;
         }
-
         .jumbotron::before {
             left: 0;
         }
@@ -53,7 +50,7 @@
         .jumbotron::after {
             right: 0;
         }
-
+*/
 
         .navbar {
             position: relative;
@@ -61,7 +58,7 @@
             left: 0;
             right: 0;
             z-index: 1000;
-            background-color: #171717;
+            background-color: #000000;
         }
         /* Зміна кольору тексту у навігації */
         .navbar-nav .nav-link {
@@ -80,7 +77,7 @@
             justify-content: center;
             margin-top: 20px; /* Додайте відступ зверху для розділення між навігацією та блоком іконок */
             padding: 10px 0; /* Додайте внутрішній відступ для іконок */
-            background-color: #171717; /* Колір фону блоку іконок */
+            background-color: #000000; /* Колір фону блоку іконок */
         }
 
         .social-icons a {
@@ -91,8 +88,11 @@
         /* Медіа-запит для мобільних пристроїв */
         @media only screen and (max-width: 768px) {
             .social-icons a {
-                margin: 0 60px; /* Зменшіть відступ між іконками на мобільних пристроях */
+                font-size: 24px;
             }
+            .social {
+                padding: 10px; /* Додайте внутрішній відступ для кращого вигляду */
+            }            
         }
         .navbar-text {
             font-size: 48px;
@@ -128,7 +128,7 @@
         }
 
         .card-body {
-            background-color: #171717;
+            background-color: #000000;
         }
 
         .btn-transparent-white {
@@ -160,65 +160,144 @@
         }
 
         div.container p {
-            font-size: 20px;
+            font-size: 16px;
         }
+
+        .card-text{
+            font-size: 22px;
+            font-weight: bold;
+            color: white;
+        }
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+            background-color: #000000;
+        }
+
+        .social-icons a {
+            color: white;
+            font-size: 48px;
+        }
+        .bfon {
+            background-color: #000000;
+        }
+        .cart {
+            border: 1px solid rgba(0, 0, 0, .125);
+            background-color: #fff;
+        }
+        .dark-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5); /* Затемнення з транспарентним чорним кольором */
+        }
+        #about {
+            display: flex;
+            align-items: stretch;
+        }
+
+        .jumbotron {
+            flex-grow: 1;
+        }
+
     </style>
 </head>
 <body>
-    <header>
+<header>
     <!-- Блок "Про нас" з навігацією -->
-        <nav class="navbar navbar-expand-lg">
-            <div class="container">
-                <!-- Фотографія -->
-                <a class="navbar-brand d-flex align-items-center" href="#">
-                    <img src="pic/logos.jpg" alt="" width="100px" height="100px">
-                    <span class="navbar-text">Маг Карим</span>
-                </a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="burger-icon"></span>
-                </button>
-
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ml-auto">
-                        <li class="nav-item mr-3">
-                            <a class="nav-link" href="#about">Обо мне</a>
-                        </li>
-                        <li class="nav-item mr-3">
-                            <a class="nav-link" href="#services">Услуги</a>
-                        </li>
-                        <li class="nav-item mr-3">
-                            <a class="nav-link" href="#contact">Отзывы</a>
-                        </li>
-                        <li class="nav-item mr-3">
-                            <a class="nav-link" href="#contact">Контакты</a>
-                        </li>
-                    </ul>
-                </div>
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <!-- Фотографія -->
+            <a class="navbar-brand d-flex align-items-center" href="#">
+                <img src="pic/rel.jpg" alt="" width="100px" height="100px">
+                <span class="navbar-text">Маг Карим</span>
+            </a>
+            <div class="air"></div>
+            <!-- Додатковий блок з текстом справа -->
+            <div class="ml-auto mt-2">
+                <h5></h5>
+                <p class="font-red">* Я не могу дать гарантию помощи без ознакомления с ситуацией. Любая магическая работа, проводится только после предварительной диагностики, в процессе которой определяется сложность, шансы на успех и сроки выполнения работы. Результаты работы индивидуальны и могут отличаться в каждом отдельном случае.</p>
             </div>
-        </nav>
-    </header>
-
-    <!-- Блок із соціальними іконками -->
-    <div class="social-icons">
-        <a href="#"><i class="fab fa-facebook-f"></i></a>
-        <a href="#"><i class="fab fa-twitter"></i></a>
-        <a href="#"><i class="fab fa-instagram"></i></a>
-    </div>
-
-    <div id="about" class="section">
-        <section class="jumbotron">
-            <div class="container-fluid">
+        </div>
+    </nav>
+</header>
+    <div id="about" class="section d-flex chudo">
+        <section class="jumbotron chudo">
+            <div class="container-fluid p-0">
                 <div class="row">
-                    <div class="col-lg-12 text-center text-content">
-                        <h1 class="display-4">Меня Зовут Карим</h1>
-                        <p class="lead">Я практикующий маг и экстрасенс.</p>
-                        <a href="#" class="btn btn-transparent-white btn-lg" data-toggle="modal" data-target="#exampleModal">Написать мне</a>
+                    <!-- Карточка з фото -->
+                    <div class="col-md-6 mb-4">
+                        <div class="card h-100">
+                            <div class="dark-overlay"></div>
+                            <img src="pic/red.png" class="card-img-top" alt="...">
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <div class="row text-center">
+                                    <div class="col-6 mb-3">
+                                        <div class="social d-flex flex-column align-items-center">
+                                            <a class="navbar-brand" href="#">
+                                                <img src="pic/icon-viber.png" alt="" width="48px" height="48px">                                               
+                                            </a>
+                                            <span class="card-text">Viber</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 mb-3">
+                                        <div class="social d-flex flex-column align-items-center">
+                                            <a class="navbar-brand" href="#">
+                                                <img src="pic/icon-whatsapp.png" alt="" width="48px" height="48px">                                               
+                                            </a>
+                                            <span class="card-text">Whatsapp</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 mb-3">
+                                        <div class="social d-flex flex-column align-items-center">
+                                            <a class="navbar-brand" href="#">
+                                                <img src="pic/icon-telegram.png" alt="" width="48px" height="48px">                                               
+                                            </a>
+                                            <span class="card-text">Telegram</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 mb-3">
+                                        <div class="social d-flex flex-column align-items-center">
+                                            <a class="navbar-brand" href="#">
+                                                <img src="pic/icon-instagram.png" alt="" width="48px" height="48px">
+                                            </a>
+                                            <span class="card-text">Instagram</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Надписи з контактними даними -->
+                                <div class="row justify-content-center">
+                                    <div class="col-12 text-center">
+                                        <span class="card-text">+38 (063) 561-32-99</span>
+                                    </div>
+                                </div>
+                                <div class="row justify-content-center">
+                                    <div class="col-12 text-center">
+                                        <span class="card-text">veleyara.vedma@gmail.com</span>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
     </div>
 
+    <div class="container">
+        <img src="pic/line.png" alt="" class="img-fluid separator-image" style="width:100px;  height: 40px;">
+    </div>
+
+
+<!--                        <a href="#" class="btn btn-transparent-white btn-lg" data-toggle="modal" data-target="#exampleModal">Написать мне</a> -->
 
     <div id="services" class="section">
         <section class="py-5">
@@ -227,7 +306,7 @@
                 <div class="row">
                     <div class="col-md-6">
                         <!-- Вставте зображення тут -->
-                        <img src="pic/colag.jpg" alt="Зображення" class="img-fluid" style="max-height: 400px;">
+                        <img src="pic/colagv.jpg" alt="Зображення" class="img-fluid" style="max-height: 400px;">
                     </div>
                     <div class="col-md-6">
                         <div class="row">
