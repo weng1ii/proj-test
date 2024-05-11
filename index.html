@@ -7,17 +7,18 @@
     <!-- Підключення Bootstrap CSS -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     <!-- Власний CSS -->
     <style>
         /* Додайте свої стилі тут */
         body, html {
             height: 100%;
-            background-color: #000000; /* Колір фону */
+            background-color: #000000; 
             color: #FFFFFF;
             font-family: Open Sans;
         }
         .section {
-            height: 100vh;
+    /* height: 100vh; */
             position: relative;
         }
         .air{
@@ -28,8 +29,9 @@
             background-size: cover;
             background-position: center;
             color: white;
-            min-height: 100vh; /* Змінено висоту на мінімальну */
             background-color: #000000;
+            height: auto;
+            overflow: hidden; /* Додано обмеження видимості */
         }
 
        /* Додані стилі для затемнення боків */
@@ -70,21 +72,6 @@
             color: #FFFFFF;
         }
 
-        .social-icons {
-            position: relative;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-top: 20px; /* Додайте відступ зверху для розділення між навігацією та блоком іконок */
-            padding: 10px 0; /* Додайте внутрішній відступ для іконок */
-            background-color: #000000; /* Колір фону блоку іконок */
-        }
-
-        .social-icons a {
-            color: white;
-            font-size: 48px; /* Зменшіть розмір іконок */
-            margin: 0 150px; /* Зменшіть відступ між іконками */
-        }
         /* Медіа-запит для мобільних пристроїв */
         @media only screen and (max-width: 768px) {
             .social-icons a {
@@ -92,7 +79,7 @@
             }
             .social {
                 padding: 10px; /* Додайте внутрішній відступ для кращого вигляду */
-            }            
+            }           
         }
         .navbar-text {
             font-size: 48px;
@@ -168,17 +155,6 @@
             font-weight: bold;
             color: white;
         }
-        .social-icons {
-            display: flex;
-            justify-content: center;
-            margin-top: 20px;
-            background-color: #000000;
-        }
-
-        .social-icons a {
-            color: white;
-            font-size: 48px;
-        }
         .bfon {
             background-color: #000000;
         }
@@ -203,6 +179,109 @@
             flex-grow: 1;
         }
 
+        .social-icons {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 20px; /* Додайте відступ зверху для розділення між навігацією та блоком іконок */
+            padding: 10px 0; /* Додайте внутрішній відступ для іконок */
+            background-color: #000000; /* Колір фону блоку іконок */
+        }
+
+        .social-icons a {
+            color: white;
+            font-size: 48px; /* Зменшіть розмір іконок */
+            margin: 0 150px; /* Зменшіть відступ між іконками */
+            position: relative; /* Додано для коректного відображення підсвітки */
+            transition: color 0.3s ease; /* Плавний перехід кольору при наведенні */
+        }
+
+        .social-icons a:hover {
+            color: #ff0000; /* Змінюємо колір при наведенні на червоний */
+        }
+
+        .social-icons a:hover::before {
+            content: ""; /* Додаємо підсвітку */
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background-color: #ff0000;
+            border-radius: 50%;
+            top: -5px;
+            right: -5px;
+            transition: opacity 0.3s ease; /* Плавний перехід прозорості */
+        }
+
+        .social-icons a:hover::after {
+            content: ""; /* Додаємо підсвітку */
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background-color: #ff0000;
+            border-radius: 50%;
+            bottom: -5px;
+            left: -5px;
+            transition: opacity 0.3s ease; /* Плавний перехід прозорості */
+        }
+        .social-icon-link {
+            position: relative;
+            transition: color 0.3s ease;
+        }
+
+        /* Стилі для градієнтного кружечка */
+        .highlight-circle {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: radial-gradient(circle, rgba(255,255,255,0) 0%, rgba(255,0,0,0.5) 100%);
+            opacity: 0; /* Початково робимо його невидимим */
+            transition: opacity 0.3s ease; /* Анімація підсвічування */
+        }
+
+        /* Стилі для підсвічування при наведенні */
+        .social-icon-link:hover .highlight-circle {
+            opacity: 0.4; /* Зробимо підсвітку полупрозорою */
+            width: 60px; /* Збільшимо розмір підсвітки */
+            height: 60px; /* Збільшимо розмір підсвітки */
+            border-radius: 50%; /* Заокруглимо кути, щоб зробити її круглою */
+            background-color: rgba(255, 0, 0, 0.5); /* Підсвітка полупрозорим червоним кольором */
+
+        }
+        .social-icons a:hover img {
+            filter: drop-shadow(0 0 5px #ff0000) !important; /* Додайте !important, щоб підвищити пріоритет */
+        }
+
+        .social-icons a:hover::before,
+        .social-icons a:hover::after {
+            opacity: 0.7 !important; /* Зробимо підсвітку полупрозорою */
+        }
+        /* CSS */
+        .viber:hover .highlight-circle {
+            background-color: #ff0000; /* Червоний колір підсвітки для Вайберу */
+        }
+
+        .whatsapp:hover .highlight-circle {
+            background-color: #00ff00; /* Зелений колір підсвітки для Вотсапу */
+        }
+
+        .telegram:hover .highlight-circle {
+            background-color: #0000ff; /* Синій колір підсвітки для Телеграму */
+        }
+
+        .instagram:hover .highlight-circle {
+            background-color: #ff00ff; /* Пурпурний колір підсвітки для Інстаграму */
+        }
+        #about .card {
+            align-items: stretch;
+        }
+        .upcard {
+            width: 100%;
+        }
     </style>
 </head>
 <body>
@@ -224,8 +303,8 @@
         </div>
     </nav>
 </header>
-    <div id="about" class="section d-flex chudo">
-        <section class="jumbotron chudo">
+    <div id="about" class="section d-flex">
+        <section class="jumbotron">
             <div class="container-fluid p-0">
                 <div class="row">
                     <!-- Карточка з фото -->
@@ -241,32 +320,37 @@
                                 <div class="row text-center">
                                     <div class="col-6 mb-3">
                                         <div class="social d-flex flex-column align-items-center">
-                                            <a class="navbar-brand" href="#">
+                                            <a class="social-icon-link viber" href="#">
                                                 <img src="pic/icon-viber.png" alt="" width="48px" height="48px">                                               
+                                                <span class="highlight-circle"></span> <!-- Доданий елемент для градієнтного кружечка -->
                                             </a>
                                             <span class="card-text">Viber</span>
                                         </div>
+
                                     </div>
                                     <div class="col-6 mb-3">
                                         <div class="social d-flex flex-column align-items-center">
-                                            <a class="navbar-brand" href="#">
-                                                <img src="pic/icon-whatsapp.png" alt="" width="48px" height="48px">                                               
+                                            <a class="social-icon-link whatsapp" href="#">
+                                                <img src="pic/icon-whatsapp.png" alt="" width="48px" height="48px">
+                                                <span class="highlight-circle"></span>                                              
                                             </a>
                                             <span class="card-text">Whatsapp</span>
                                         </div>
                                     </div>
                                     <div class="col-6 mb-3">
                                         <div class="social d-flex flex-column align-items-center">
-                                            <a class="navbar-brand" href="#">
-                                                <img src="pic/icon-telegram.png" alt="" width="48px" height="48px">                                               
+                                            <a class="social-icon-link telegram" href="#">
+                                                <img src="pic/icon-telegram.png" alt="" width="48px" height="48px">
+                                                <span class="highlight-circle"></span>                                               
                                             </a>
                                             <span class="card-text">Telegram</span>
                                         </div>
                                     </div>
                                     <div class="col-6 mb-3">
                                         <div class="social d-flex flex-column align-items-center">
-                                            <a class="navbar-brand" href="#">
+                                            <a class="social-icon-link instagram" href="#">
                                                 <img src="pic/icon-instagram.png" alt="" width="48px" height="48px">
+                                                <span class="highlight-circle"></span>
                                             </a>
                                             <span class="card-text">Instagram</span>
                                         </div>
@@ -293,46 +377,46 @@
     </div>
 
     <div class="container">
-        <img src="pic/line.png" alt="" class="img-fluid separator-image" style="width:100px;  height: 40px;">
+        <div class="row justify-content-center"> <!-- Додано клас justify-content-center для центрування по горизонталі -->
+            <div class="col-6 text-center"> <!-- Додано клас text-center для центрування по центру -->
+                <img src="pic/line.png" alt="" class="img-fluid separator-image" style="width:181px; height: 26px;">
+            </div>
+        </div>
     </div>
 
 
-<!--                        <a href="#" class="btn btn-transparent-white btn-lg" data-toggle="modal" data-target="#exampleModal">Написать мне</a> -->
+
+<!--                         -->
 
     <div id="services" class="section">
-        <section class="py-5">
-            <div class="container">
-                <h2 class="text-center mb-4"></h2>
+        <section class="jumbotron">
+            <div class="container-fluid p-0">
                 <div class="row">
-                    <div class="col-md-6">
-                        <!-- Вставте зображення тут -->
-                        <img src="pic/colagv.jpg" alt="Зображення" class="img-fluid" style="max-height: 400px;">
+                    <!-- Карточка з фото -->
+                    <div class="col-md-6 mb-4">
+                        <div class="card h-100">
+                            <div class="dark-overlay"></div>
+                            <img src="pic/bio.png" class="card-img-top" alt="...">
+                        </div>
                     </div>
-                    <div class="col-md-6">
-                        <div class="row">
-                            <div class="col-md-12">
-                                <div class="card" style="height: 400px;">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Навчання магії</h5>
-                                        <p class="card-text">Вивчення базових і складних прийомів магії від наших професіоналів.</p>
+                    <div class="col-md-6 mb-4">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="upcard text-center">
+                                        <h1>Моя биография</h1>
                                     </div>
+                                    <div class="downcard">
+                                        <p>Я — маг и экстрасенс, чьи магические способности были с рождения. В нашей семье магические дары передаются по мужской линии, и мой дед был искусным колдуном. Для меня это не просто занятие, а настоящее призвание, путь, которому я посвятил свою жизнь и продолжаю развиваться в этом направлении.</p>
+                                    </div>                                                                      
                                 </div>
                             </div>
-                            <div class="col-md-12">
-                                <div class="card" style="height: 400px;">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Консультації</h5>
-                                        <p class="card-text">Індивідуальні консультації з досвідченими магами щодо розвитку вашої магічної практики.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-12">
-                                <div class="card" style="height: 400px;">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Магічні предмети</h5>
-                                        <p class="card-text">Продаж магічних предметів та інструментів для вашої практики.</p>
-                                    </div>
-                                </div>
+                        </div>
+                    </div>
+                    <div class="container">
+                        <div class="row justify-content-center"> <!-- Додано клас justify-content-center для центрування по горизонталі -->
+                            <div class="col-6 text-center"> <!-- Додано клас text-center для центрування по центру -->
+                                <a href="#" class="btn btn-transparent-white btn-lg justify-content-center" data-toggle="modal" data-target="#exampleModal">Написать мне</a>
                             </div>
                         </div>
                     </div>
@@ -341,6 +425,13 @@
         </section>
     </div>
 
+    <div class="container">
+        <div class="row justify-content-center"> <!-- Додано клас justify-content-center для центрування по горизонталі -->
+            <div class="col-6 text-center"> <!-- Додано клас text-center для центрування по центру -->
+                <img src="pic/line.png" alt="" class="img-fluid separator-image" style="width:181px; height: 26px;">
+            </div>
+        </div>
+    </div>
 
     <!-- Блок "Контакти" -->
     <div id="contact" class="section">
