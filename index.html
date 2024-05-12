@@ -33,27 +33,6 @@
             height: auto;
             overflow: hidden; /* Додано обмеження видимості */
         }
-
-       /* Додані стилі для затемнення боків */
-/*        .jumbotron::before,
-        .jumbotron::after {
-            content: "";
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            width: 50%; 
-            background: rgba(0, 0, 0, 0.5); 
-            z-index: 1;
-        }
-        .jumbotron::before {
-            left: 0;
-        }
-
-        .jumbotron::after {
-            right: 0;
-        }
-*/
-
         .navbar {
             position: relative;
             top: 0;
@@ -79,7 +58,8 @@
             }
             .social {
                 padding: 10px; /* Додайте внутрішній відступ для кращого вигляду */
-            }           
+            }        
+            .   
         }
         .navbar-text {
             font-size: 48px;
@@ -147,7 +127,7 @@
         }
 
         div.container p {
-            font-size: 16px;
+            font-size: 13px;
         }
 
         .card-text{
@@ -227,31 +207,24 @@
         .social-icon-link {
             position: relative;
             transition: color 0.3s ease;
+            display: inline-block;
         }
 
-        /* Стилі для градієнтного кружечка */
-        .highlight-circle {
+        .social-icon-link .highlight-circle {
             position: absolute;
-            width: 10px;
-            height: 10px;
-            border-radius: 50%;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            background: radial-gradient(circle, rgba(255,255,255,0) 0%, rgba(255,0,0,0.5) 100%);
-            opacity: 0; /* Початково робимо його невидимим */
-            transition: opacity 0.3s ease; /* Анімація підсвічування */
+            background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 80%);
+            opacity: 0.7; /* Змінено з 0.4 на 0.7 */
+            width: 42px; /* Змініть на розмір іконки */
+            height: 42px; /* Змініть на розмір іконки */
+            border-radius: 50%;
+            transition: opacity 0.3s ease;
         }
 
         /* Стилі для підсвічування при наведенні */
-        .social-icon-link:hover .highlight-circle {
-            opacity: 0.4; /* Зробимо підсвітку полупрозорою */
-            width: 60px; /* Збільшимо розмір підсвітки */
-            height: 60px; /* Збільшимо розмір підсвітки */
-            border-radius: 50%; /* Заокруглимо кути, щоб зробити її круглою */
-            background-color: rgba(255, 0, 0, 0.5); /* Підсвітка полупрозорим червоним кольором */
 
-        }
         .social-icons a:hover img {
             filter: drop-shadow(0 0 5px #ff0000) !important; /* Додайте !important, щоб підвищити пріоритет */
         }
@@ -260,28 +233,31 @@
         .social-icons a:hover::after {
             opacity: 0.7 !important; /* Зробимо підсвітку полупрозорою */
         }
-        /* CSS */
-        .viber:hover .highlight-circle {
-            background-color: #ff0000; /* Червоний колір підсвітки для Вайберу */
-        }
-
-        .whatsapp:hover .highlight-circle {
-            background-color: #00ff00; /* Зелений колір підсвітки для Вотсапу */
-        }
-
-        .telegram:hover .highlight-circle {
-            background-color: #0000ff; /* Синій колір підсвітки для Телеграму */
-        }
-
-        .instagram:hover .highlight-circle {
-            background-color: #ff00ff; /* Пурпурний колір підсвітки для Інстаграму */
-        }
         #about .card {
             align-items: stretch;
         }
         .upcard {
             width: 100%;
         }
+        .byanlign {
+            text-align: justify;
+        }
+        .highlight-circle {
+            height: 30px;
+            width: 30px;
+        }
+        .viber .highlight-circle {
+            background: radial-gradient(circle, rgb(145 4 178) 0%, rgba(255, 0, 0, 0) 80%);
+        }
+
+        .whatsapp .highlight-circle {
+            background: radial-gradient(circle, rgb(67 242 0) 0%, rgb(0 255 0 / 0%) 80%);
+        }
+
+        .telegram .highlight-circle {
+            background: radial-gradient(circle, rgb(83 151 255) 0%, rgba(0, 0, 255, 0) 80%);
+        }
+
     </style>
 </head>
 <body>
@@ -298,7 +274,7 @@
             <!-- Додатковий блок з текстом справа -->
             <div class="ml-auto mt-2">
                 <h5></h5>
-                <p class="font-red">* Я не могу дать гарантию помощи без ознакомления с ситуацией. Любая магическая работа, проводится только после предварительной диагностики, в процессе которой определяется сложность, шансы на успех и сроки выполнения работы. Результаты работы индивидуальны и могут отличаться в каждом отдельном случае.</p>
+                <p class="font-red byanlign">* Я не могу дать гарантию помощи без ознакомления с ситуацией. Любая магическая работа, проводится только после предварительной диагностики, в процессе которой определяется сложность, шансы на успех и сроки выполнения работы. Результаты работы индивидуальны и могут отличаться в каждом отдельном случае.</p>
             </div>
         </div>
     </nav>
@@ -307,13 +283,7 @@
         <section class="jumbotron">
             <div class="container-fluid p-0">
                 <div class="row">
-                    <!-- Карточка з фото -->
-                    <div class="col-md-6 mb-4">
-                        <div class="card h-100">
-                            <div class="dark-overlay"></div>
-                            <img src="pic/red.png" class="card-img-top" alt="...">
-                        </div>
-                    </div>
+
                     <div class="col-md-6 mb-4">
                         <div class="card h-100">
                             <div class="card-body">
@@ -321,8 +291,8 @@
                                     <div class="col-6 mb-3">
                                         <div class="social d-flex flex-column align-items-center">
                                             <a class="social-icon-link viber" href="#">
-                                                <img src="pic/icon-viber.png" alt="" width="48px" height="48px">                                               
-                                                <span class="highlight-circle"></span> <!-- Доданий елемент для градієнтного кружечка -->
+                                                <img src="pic/icon-viber.png" alt="" width="42px" height="42px">                                               
+                                                <span class="highlight-circle viber"></span> <!-- Доданий елемент для градієнтного кружечка -->
                                             </a>
                                             <span class="card-text">Viber</span>
                                         </div>
@@ -331,29 +301,20 @@
                                     <div class="col-6 mb-3">
                                         <div class="social d-flex flex-column align-items-center">
                                             <a class="social-icon-link whatsapp" href="#">
-                                                <img src="pic/icon-whatsapp.png" alt="" width="48px" height="48px">
-                                                <span class="highlight-circle"></span>                                              
+                                                <img src="pic/icon-whatsapp.png" alt="" width="42px" height="42px">
+                                                <span class="highlight-circle whatsapp"></span>                                              
                                             </a>
                                             <span class="card-text">Whatsapp</span>
                                         </div>
                                     </div>
-                                    <div class="col-6 mb-3">
-                                        <div class="social d-flex flex-column align-items-center">
-                                            <a class="social-icon-link telegram" href="#">
-                                                <img src="pic/icon-telegram.png" alt="" width="48px" height="48px">
-                                                <span class="highlight-circle"></span>                                               
-                                            </a>
-                                            <span class="card-text">Telegram</span>
-                                        </div>
-                                    </div>
-                                    <div class="col-6 mb-3">
-                                        <div class="social d-flex flex-column align-items-center">
-                                            <a class="social-icon-link instagram" href="#">
-                                                <img src="pic/icon-instagram.png" alt="" width="48px" height="48px">
-                                                <span class="highlight-circle"></span>
-                                            </a>
-                                            <span class="card-text">Instagram</span>
-                                        </div>
+                                </div>
+                                <div class="row justify-content-center">
+                                    <div class="social d-flex flex-column align-items-center justify-content-center">
+                                        <a class="social-icon-link telegram" href="#">
+                                            <img src="pic/icon-telegram.png" alt="" width="42px" height="42px">
+                                            <span class="highlight-circle telegram"></span>                                               
+                                        </a>
+                                        <span class="card-text">Telegram</span>
                                     </div>
                                 </div>
                                 <!-- Надписи з контактними даними -->
@@ -371,16 +332,21 @@
                             </div>
                         </div>
                     </div>
+                    <!-- Карточка з фото -->
+                    <div class="col-md-6 mb-4">
+                        <div class="card h-100">
+                            <div class="dark-overlay"></div>
+                            <img src="pic/enhbio.png" class="card-img-top" alt="...">
+                        </div>
+                    </div>                    
                 </div>
             </div>
         </section>
     </div>
 
-    <div class="container">
+    <div class="container line">
         <div class="row justify-content-center"> <!-- Додано клас justify-content-center для центрування по горизонталі -->
-            <div class="col-6 text-center"> <!-- Додано клас text-center для центрування по центру -->
-                <img src="pic/line.png" alt="" class="img-fluid separator-image" style="width:181px; height: 26px;">
-            </div>
+            <img src="pic/line.png" alt="" class="separator-image" style="width:300px; height: auto;">
         </div>
     </div>
 
@@ -392,13 +358,7 @@
         <section class="jumbotron">
             <div class="container-fluid p-0">
                 <div class="row">
-                    <!-- Карточка з фото -->
-                    <div class="col-md-6 mb-4">
-                        <div class="card h-100">
-                            <div class="dark-overlay"></div>
-                            <img src="pic/enhbio.png" class="card-img-top" alt="...">
-                        </div>
-                    </div>
+
                     <div class="col-md-6 mb-4">
                         <div class="card h-100">
                             <div class="card-body">
@@ -406,11 +366,18 @@
                                     <div class="upcard text-center">
                                         <h1>Моя биография</h1>
                                     </div>
-                                    <div class="downcard">
-                                        <p>Я — маг и экстрасенс, чьи магические способности были с рождения. В нашей семье магические дары передаются по мужской линии, и мой дед был искусным колдуном. Для меня это не просто занятие, а настоящее призвание, путь, которому я посвятил свою жизнь и продолжаю развиваться в этом направлении.</p>
+                                    <div class="downcard ">
+                                        <p class="byanlign">Я — маг и экстрасенс, чьи магические способности были с рождения. В нашей семье магические дары передаются по мужской линии, и мой дед был искусным колдуном. Для меня это не просто занятие, а настоящее призвание, путь, которому я посвятил свою жизнь и продолжаю развиваться в этом направлении.</p>
                                     </div>                                                                      
                                 </div>
                             </div>
+                        </div>
+                    </div>
+                    <!-- Карточка з фото -->
+                    <div class="col-md-6 mb-4">
+                        <div class="card h-100">
+                            <div class="dark-overlay"></div>
+                            <img src="pic/red.png" class="card-img-top" alt="...">
                         </div>
                     </div>
                     <div class="container">
@@ -425,11 +392,9 @@
         </section>
     </div>
 
-    <div class="container">
+    <div class="container line">
         <div class="row justify-content-center"> <!-- Додано клас justify-content-center для центрування по горизонталі -->
-            <div class="col-6 text-center"> <!-- Додано клас text-center для центрування по центру -->
-                <img src="pic/line.png" alt="" class="img-fluid separator-image" style="width:181px; height: 26px;">
-            </div>
+            <img src="pic/line.png" alt="" class="separator-image" style="width:300px; height: auto;">
         </div>
     </div>
 
