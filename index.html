@@ -18,7 +18,7 @@
             font-family: Open Sans;
         }
         .section {
-    /* height: 100vh; */
+
             position: relative;
         }
         .air{
@@ -31,7 +31,7 @@
             color: white;
             background-color: #000000;
             height: auto;
-            overflow: hidden; /* Додано обмеження видимості */
+            overflow: hidden; 
         }
         .navbar {
             position: relative;
@@ -41,7 +41,7 @@
             z-index: 1000;
             background-color: #000000;
         }
-        /* Зміна кольору тексту у навігації */
+ 
         .navbar-nav .nav-link {
             color: #FFFFFF; 
             font-size: 24px;
@@ -93,11 +93,11 @@
         .burger-icon::after {
             bottom: -10px;
         }
-
+        /*    
         .card-body {
             background-color: #000000;
         }
-
+        */
         .btn-transparent-white {
             background-color: transparent;
             border: 2px solid #ffffff; /* Біла обводка */
@@ -216,22 +216,22 @@
             left: 50%;
             transform: translate(-50%, -50%);
             background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 80%);
-            opacity: 0.7; /* Змінено з 0.4 на 0.7 */
-            width: 42px; /* Змініть на розмір іконки */
-            height: 42px; /* Змініть на розмір іконки */
+            opacity: 0.7; 
+            width: 42px; 
+            height: 42px; 
             border-radius: 50%;
             transition: opacity 0.3s ease;
         }
 
-        /* Стилі для підсвічування при наведенні */
+       
 
         .social-icons a:hover img {
-            filter: drop-shadow(0 0 5px #ff0000) !important; /* Додайте !important, щоб підвищити пріоритет */
+            filter: drop-shadow(0 0 5px #ff0000) !important; 
         }
 
         .social-icons a:hover::before,
         .social-icons a:hover::after {
-            opacity: 0.7 !important; /* Зробимо підсвітку полупрозорою */
+            opacity: 0.7 !important;
         }
         #about .card {
             align-items: stretch;
@@ -239,9 +239,11 @@
         .upcard {
             width: 100%;
         }
+        /*
         .byanlign {
             text-align: justify;
         }
+        */
         .highlight-circle {
             height: 30px;
             width: 30px;
@@ -253,10 +255,9 @@
         .whatsapp .highlight-circle {
             background: radial-gradient(circle, rgb(67 242 0) 0%, rgb(0 255 0 / 0%) 80%);
         }
-
         .telegram .highlight-circle {
             background: radial-gradient(circle, rgb(83 151 255) 0%, rgba(0, 0, 255, 0) 80%);
-        }
+        }        
         .chover {
             box-shadow: 0px 0px 51px -36px rgba(0, 0, 0, 1);
         }
@@ -269,17 +270,37 @@
         .bg {
              background-color: white; !important;
         }
-        /*
+        
         .grad {
             background: linear-gradient(to right, rgba(0,0,0,0.4) 0%, rgba(19,109,123,0.4) 50%, rgba(0,0,0,0.4) 100%);
 
         }
-        */
+        
+        .card {
+            border: 0px; !important;
+        }
+
+        .social-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .social {
+            flex: 0 0 calc(33.33% - 20px); /* Ширина блоков, с учетом отступов между ними */
+            margin-right: 20px; /* Отступ между блоками */
+            margin-bottom: 20px; /* Отступ между блоками */
+        }
+
+        @media screen and (max-width: 767px) {
+            .social {
+                flex-basis: calc(50% - 20px); /* Для мобильных устройств устанавливаем ширину в 50% с отступами */
+            }
+        }
     </style>
 </head>
 <body>
 <header>
-    <!-- Блок "Про нас" з навігацією -->
     <nav class="navbar navbar-expand-lg">
         <div class="container">
             <!-- Фотографія -->
@@ -288,7 +309,7 @@
                 <span class="navbar-text pl-3" style="">Маг Карим</span>
             </a>
             <div class="air"></div>
-            <!-- Додатковий блок з текстом справа -->
+            
             <div class="ml-auto mt-2">
                 <h5></h5>
                 <p class="font-red byanlign">* Я не могу дать гарантию помощи без ознакомления с ситуацией. Любая магическая работа, проводится только после предварительной диагностики, в процессе которой определяется сложность, шансы на успех и сроки выполнения работы. Результаты работы индивидуальны и могут отличаться в каждом отдельном случае.</p>
@@ -297,43 +318,42 @@
     </nav>
 </header>
     <div id="about" class="section d-flex">
-        <section class="jumbotron ">
+        <section class="jumbotron">
             <div class="container-fluid p-0">
                 <div class="row">
                     <div class="col-md-6 mb-4">
-                        <div class="card h-100 chover bg ">
-                            <div class="card-body ">
-                                <div class="row text-center">
-                                    <div class="col-6 mb-3">
+                        <div class="card h-100 chover">
+                            <div class="card-body">
+                                <div class="row text-center social-container">
+                                    <div class="col-4 mb-3">
                                         <div class="social d-flex flex-column align-items-center">
                                             <a class="social-icon-link viber" href="#">
-                                                <img src="pic/icon-viber.png" alt="" width="42px" height="42px">                                               
-                                                <span class="highlight-circle viber"></span> <!-- Доданий елемент для градієнтного кружечка -->
+                                                <img src="pic/icon-viber.png" alt="" width="42px" height="42px">
+                                                <span class="highlight-circle viber"></span>
                                             </a>
                                             <span class="card-text">Viber</span>
                                         </div>
-
                                     </div>
-                                    <div class="col-6 mb-3">
+                                    <div class="col-4 mb-3">
                                         <div class="social d-flex flex-column align-items-center">
                                             <a class="social-icon-link whatsapp" href="#">
                                                 <img src="pic/icon-whatsapp.png" alt="" width="42px" height="42px">
-                                                <span class="highlight-circle whatsapp"></span>                                              
+                                                <span class="highlight-circle whatsapp"></span>
                                             </a>
                                             <span class="card-text">Whatsapp</span>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="row justify-content-center">
-                                    <div class="social d-flex flex-column align-items-center justify-content-center">
-                                        <a class="social-icon-link telegram" href="#">
-                                            <img src="pic/icon-telegram.png" alt="" width="42px" height="42px">
-                                            <span class="highlight-circle telegram"></span>                                               
-                                        </a>
-                                        <span class="card-text">Telegram</span>
+                                    <div class="col-4 mb-3">
+                                        <div class="social d-flex flex-column align-items-center">
+                                            <a class="social-icon-link telegram" href="#">
+                                                <img src="pic/icon-telegram.png" alt="" width="42px" height="42px">
+                                                <span class="highlight-circle telegram"></span>
+                                            </a>
+                                            <span class="card-text">Telegram</span>
+                                        </div>
                                     </div>
                                 </div>
-                                <!-- Надписи з контактними даними -->
+
                                 <div class="row justify-content-center">
                                     <div class="col-12 text-center">
                                         <span class="card-text">+38 (093) 235-63-39</span>
@@ -344,24 +364,23 @@
                                         <span class="card-text">karimmag4@gmail.com</span>
                                     </div>
                                 </div>
-
                             </div>
                         </div>
                     </div>
-                    <!-- Карточка з фото -->
+
                     <div class="col-md-6 mb-4">
                         <div class="card h-100">
                             <div class="dark-overlay"></div>
-                            <img src="pic/co2.jpg" class="card-img-top" alt="...">
+                            <img src="pic/ut.jpg" class="card-img-top" alt="...">
                         </div>
-                    </div>                    
+                    </div>
                 </div>
             </div>
         </section>
     </div>
 
     <div class="container line">
-        <div class="row justify-content-center"> <!-- Додано клас justify-content-center для центрування по горизонталі -->
+        <div class="row justify-content-center"> 
             <img src="pic/line.png" alt="" class="separator-image" style="width:300px; height: auto;">
         </div>
     </div>
@@ -371,7 +390,7 @@
 <!--                         -->
 
     <div id="me" class="section">
-        <section class="jumbotron grad">
+        <section class="jumbotron">
             <div class="container-fluid p-0">
                 <div class="row">
                     <div class="col-md-6 mb-4">
@@ -397,28 +416,13 @@
                             <img src="pic/co1.jpg" class="card-img-top" alt="...">
                         </div>
                     </div>                    
-<!--                   
-                    <div class="col-md-6 mb-4">
-                        <div class="card h-100">
-                            <div class="dark-overlay"></div>
-                            <img src="pic/p1.jpg" class="card-img-top" alt="...">
-                        </div>
-                    </div>    
-                    <div class="col-md-6 mb-4">
-                        <div class="card h-100">
-                            <div class="dark-overlay"></div>
-                            <img src="pic/p2.jpg" class="card-img-top" alt="...">
-                        </div>
-                    </div> 
--->                  
- 
                 </div>
             </div>
         </section>
     </div>
 
     <div class="container line pb-3">
-        <div class="row justify-content-center"> <!-- Додано клас justify-content-center для центрування по горизонталі -->
+        <div class="row justify-content-center"> 
             <img src="pic/line.png" alt="" class="separator-image" style="width:300px; height: auto;">
         </div>
     </div>
@@ -429,7 +433,7 @@
         </div>
     </div> 
     <div class="container line">
-        <div class="row justify-content-center"> <!-- Додано клас justify-content-center для центрування по горизонталі -->
+        <div class="row justify-content-center"> 
             <h1 class="pt-3" style=" font-size:28px; ">Услуги</h1>
         </div>
     </div>
@@ -564,13 +568,9 @@
         </section>
     </div>
 
-<!--
-    <div class="upcard text-center">
-        <h1 style="font-weight: bold; padding-bottom: 20px; font-size: 28px;">Результаты индивидуальны в каждом случае</h1>
-    </div>
--->
+
     <div class="container line">
-        <div class="row justify-content-center"> <!-- Додано клас justify-content-center для центрування по горизонталі -->
+        <div class="row justify-content-center"> 
             <img src="pic/line.png" alt="" class="separator-image" style="width:300px; height: auto;">
         </div>
     </div>
@@ -615,49 +615,59 @@
         <section class="jumbotron">
             <div class="container-fluid p-0">
                 <div class="row">
-                    <div class="col-md-4 mb-4">
-                        <div class="card h-100 chover bg">
+                    <div class="col-md-6 mb-4">
+                        <div class="card h-100 chover">
                             <div class="card-body">
-                                <div class="row text-center">
-                                    <div class="col mb-3">
+                                <div class="row text-center social-container">
+                                    <div class="col-4 mb-3">
                                         <div class="social d-flex flex-column align-items-center">
                                             <a class="social-icon-link viber" href="#">
-                                                <img src="pic/icon-viber.png" alt="" width="42px" height="42px">                                               
-                                                <span class="highlight-circle viber"></span> 
+                                                <img src="pic/icon-viber.png" alt="" width="42px" height="42px">
+                                                <span class="highlight-circle viber"></span>
                                             </a>
                                             <span class="card-text">Viber</span>
                                         </div>
-
                                     </div>
-                                    <div class="col mb-3">
+                                    <div class="col-4 mb-3">
                                         <div class="social d-flex flex-column align-items-center">
                                             <a class="social-icon-link whatsapp" href="#">
                                                 <img src="pic/icon-whatsapp.png" alt="" width="42px" height="42px">
-                                                <span class="highlight-circle whatsapp"></span>                                              
+                                                <span class="highlight-circle whatsapp"></span>
                                             </a>
                                             <span class="card-text">Whatsapp</span>
                                         </div>
                                     </div>
-                                    <div class="col mb-3">
+                                    <div class="col-4 mb-3">
                                         <div class="social d-flex flex-column align-items-center">
-                                            <a class="social-icon-link telegram" href="#">
+                                            <a class="social-icon-link telegram" href="https://t.me/Mag_karim">
                                                 <img src="pic/icon-telegram.png" alt="" width="42px" height="42px">
-                                                <span class="highlight-circle telegram"></span>                                               
+                                                <span class="highlight-circle telegram"></span>
                                             </a>
                                             <span class="card-text">Telegram</span>
                                         </div>
                                     </div>
                                 </div>
+
+                                <div class="row justify-content-center">
+                                    <div class="col-12 text-center">
+                                        <span class="card-text">+38 (093) 235-63-39</span>
+                                    </div>
+                                </div>
+                                <div class="row justify-content-center">
+                                    <div class="col-12 text-center">
+                                        <span class="card-text">karimmag4@gmail.com</span>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </div>                 
+                    </div>           
                 </div>
             </div>
         </section>
     </div>   
 
-    <div class="container line">
-        <div class="row justify-content-center"> <!-- Додано клас justify-content-center для центрування по горизонталі -->
+    <div class="container line pb-4">
+        <div class="row justify-content-center"> 
             <img src="pic/rel.jpg" alt="" class="separator-image" style="width:100px; height: auto;">
         </div>
     </div>
@@ -670,17 +680,16 @@
         </div>
     </div>
 
-    <!-- Прозрачная белая линия -->
+
     <div class="transparent-white-line"></div>
 
-    <!-- Footer -->
+
     <footer class="text-center py-4">
         <div class="container">
             <p style="font-weight: bold;">&copy;Copyright 2018-2024</p>
         </div>
     </footer>
-    
-    <!-- Модальне вікно -->
+
     <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
@@ -692,7 +701,7 @@
                             <div class="social d-flex flex-column align-items-center">
                                 <a class="social-icon-link viber" href="#">
                                     <img src="pic/icon-viber.png" alt="" width="42px" height="42px">                                               
-                                    <span class="highlight-circle viber"></span> <!-- Доданий елемент для градієнтного кружечка -->
+                                    <span class="highlight-circle viber"></span> 
                                 </a>
                                 <span class="card-text">Viber</span>
                             </div>
@@ -717,7 +726,6 @@
                             <span class="card-text">Telegram</span>
                         </div>
                     </div>
-                    <!-- Надписи з контактними даними -->
                     <div class="row justify-content-center">
                         <div class="col-12 text-center">
                             <span class="card-text">+38 (063) 561-32-99</span>
@@ -736,9 +744,8 @@
         </div>
     </div>
     
-    <!-- Підключення FontAwesome для значків -->
+  
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-    <!-- Підключення Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
