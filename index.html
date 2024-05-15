@@ -29,8 +29,8 @@
             position: relative;
         }
         .air{
-            height: 1px;
-            width: 40vh;
+            height: 50px;
+            width: px;
         }
         .jumbotron {
             background-size: cover;
@@ -215,7 +215,7 @@
             transition: color 0.3s ease;
             display: inline-block;
         }
-/*
+
         .social-icon-link .highlight-circle {
             position: absolute;
             top: 50%;
@@ -234,7 +234,7 @@
         .social-icons a:hover img {
             filter: drop-shadow(0 0 5px #ff0000) !important; 
         }
-*/
+
         .social-icons a:hover::before,
         .social-icons a:hover::after {
             opacity: 0.7 !important;
@@ -251,8 +251,8 @@
         }
         */
         .highlight-circle {
-            height: 30px;
-            width: 30px;
+            height: 30px; 
+            width: 30px; 
         }
         .viber .highlight-circle {
             background: radial-gradient(circle, rgb(145 4 178) 0%, rgba(255, 0, 0, 0) 80%);
@@ -311,12 +311,21 @@
                 flex-basis: calc(50% - 20px); 
             }
         }
+        
         .container {
             background-color: transparent; !important;
         }
+
         .row {
             background-color: transparent; !important;
-        }            
+        }      
+
+        section.jumbotron.grad {
+            margin:0px;
+        }     
+        div.row.justify-content-center {
+            background-color:transparent;
+        }
     </style>
 </head>
 <body>
@@ -342,418 +351,421 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
     </nav>
 </header>
-    <div class="backg grad">
-        <div id="about" class="section d-flex">
-            <section class="jumbotron">
-                <div class="container-fluid p-0">
-                    <div class="row">
-                        <div class="col-md-6 mb-4">
-                            <div class="card h-100 chover">
-                                <div class="card-body">
-                                    <div class="row text-center social-container">
-                                        <div class="col-4 mb-3">
-                                            <div class="social d-flex flex-column align-items-center">
-                                                <a class="social-icon-link viber" href="https://tinyurl.com/4vmypddb">
-                                                    <img src="pic/icon-viber.png" alt="" width="42px" height="42px">
-                                                    <span class="highlight-circle viber"></span>
-                                                </a>
-                                                <span class="card-text">Viber</span>
-                                            </div>
-                                        </div>
-                                        <div class="col-4 mb-3">
-                                            <div class="social d-flex flex-column align-items-center">
-                                                <a class="social-icon-link whatsapp" href="https://api.whatsapp.com/send?phone=380932356339">
-                                                    <img src="pic/icon-whatsapp.png" alt="" width="42px" height="42px">
-                                                    <span class="highlight-circle whatsapp"></span>
-                                                </a>
-                                                <span class="card-text">Whatsapp</span>
-                                            </div>
-                                        </div>
-                                        <div class="col-4 mb-3">
-                                            <div class="social d-flex flex-column align-items-center">
-                                                <a class="social-icon-link telegram" href="https://t.me/Mag_karim">
-                                                    <img src="pic/icon-telegram.png" alt="" width="42px" height="42px">
-                                                    <span class="highlight-circle telegram"></span>
-                                                </a>
-                                                <span class="card-text">Telegram</span>
-                                            </div>
+    <div id="about" class="section d-flex">
+        <section class="jumbotron">
+            <div class="container-fluid p-0">
+                <div class="row">
+                    <div class="col-md-6 mb-4">
+                        <div class="card h-100 chover">
+                            <div class="card-body">
+                                <div class="row text-center social-container">
+                                    <div class="col-4 mb-3">
+                                        <div class="social d-flex flex-column align-items-center">
+                                            <a class="social-icon-link viber" href="https://tinyurl.com/4vmypddb">
+                                                <img src="pic/icon-viber.png" alt="" width="42px" height="42px">
+                                                <span class="highlight-circle viber"></span>
+                                            </a>
+                                            <span class="card-text">Viber</span>
                                         </div>
                                     </div>
-
-                                    <div class="row justify-content-center">
-                                        <div class="col-12 text-center">
-                                            <span class="card-text">+38 (093) 235-63-39</span>
+                                    <div class="col-4 mb-3">
+                                        <div class="social d-flex flex-column align-items-center">
+                                            <a class="social-icon-link whatsapp" href="https://api.whatsapp.com/send?phone=380932356339">
+                                                <img src="pic/icon-whatsapp.png" alt="" width="42px" height="42px">
+                                                <span class="highlight-circle whatsapp"></span>
+                                            </a>
+                                            <span class="card-text">Whatsapp</span>
                                         </div>
                                     </div>
-                                    <div class="row justify-content-center">
-                                        <div class="col-12 text-center">
-                                            <a href="mailto:karimmag4@gmail.com"><span class="card-text">karimmag4@gmail.com</span></a>
+                                    <div class="col-4 mb-3">
+                                        <div class="social d-flex flex-column align-items-center">
+                                            <a class="social-icon-link telegram" href="https://t.me/Mag_karim">
+                                                <img src="pic/icon-telegram.png" alt="" width="42px" height="42px">
+                                                <span class="highlight-circle telegram"></span>
+                                            </a>
+                                            <span class="card-text">Telegram</span>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
 
-                        <div class="col-md-6 mb-4">
-                            <div class="card h-100">
-                                <div class="dark-overlay"></div>
-                                <img src="pic/ut.jpg" class="card-img-top" alt="...">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </div>
-
-        <div class="container line">
-            <div class="row justify-content-center"> 
-                <img src="pic/line.png" alt="" class="separator-image" style="width:300px; height: auto;">
-            </div>
-        </div>
-
-
-
-    <!--                         -->
-
-        <div id="me" class="section">
-            <section class="jumbotron grad">
-                <div class="container-fluid p-0">
-                    <div class="row">
-                        <div class="col-md-6 mb-4">
-                            <div class="card h-100">
-                                <div class="card-body">
-                                    <div class="row">
-                                        <div class="upcard text-center">
-                                            <h1>Моя биография</h1>
-                                        </div>
-                                        <div class="downcard ">
-                                            <p class="byanlign">Я — эксперт в области Западноевропейской Высшей Черной Магии, Славянской Черной Магии и Чернокнижия. Как автор книг и статей о магии, я предоставляю непревзойденные знания и опыт. В моей практике используются проверенные временем обряды Черной Магии, переданные мне по наследству.</p>
-                                            <p class="byanlign">Мой реальный опыт работы с людьми превышает 10 лет, из которых 5 лет — это период открытой дистанционной работы через интернет, что подтверждается долговечностью моего веб-сайта.</p>
-                                            <p class="byanlign">Я провел многие годы, практикуя в этой традиции, совершенствуя свое мастерство и разрабатывая уникальные техники. В своем стремлении к разнообразию я также изучал другие магические традиции, такие как ведическая магия и церемониальная ритуальная магия. Мои навыки были отточены годами практики, и я посвятил свою жизнь магическому искусству, что делает меня намного более эффективным, чем самоучки в магии. Мое мастерство гарантирует качественные результаты, не нанося вреда человеку, в отличие от многих дилетантов в этой области.</p>
-
-                                        </div>                                                                      
-                                    </div>  
-                                </div>                            
-                            </div>
-                        </div>
-                        <div class="col-md-6 mb-4a pb-4">
-                            <div class="row justify-content-center">
-                                <a href="#" class="btn btn-transparent-white btn-lg" data-toggle="modal" data-target="#exampleModal">Написать мне</a>
-                            </div>
-                        </div>
-                        <div class="col-md-6 mb-4 pt-4">
-                            <div class="card h-100">
-                                <div class="dark-overlay"></div>
-                                <img src="pic/co1.jpg" class="card-img-top" alt="...">
-                            </div>
-                        </div>                    
-                    </div>
-                </div>
-            </section>
-        </div>
-
-
-
-        <div class="container line pb-3">
-            <div class="row justify-content-center"> 
-                <img src="pic/line.png" alt="" class="separator-image" style="width:300px; height: auto;">
-            </div>
-        </div>
-        <div class="col-md-6 mb-4">
-            <div class="card h-100">
-                <div class="dark-overlay"></div>
-                <img src="pic/p3.jpg" class="card-img-top" alt="...">
-            </div>
-        </div> 
-        <div class="container line">
-            <div class="row justify-content-center"> 
-                <h1 class="pt-3" style=" font-size:28px; ">Услуги</h1>
-            </div>
-        </div>
-
-        <div id="job" class="section">
-            <section class="jumbotron grad">
-                <div class="container-fluid p-0">
-                    <div class="row">
-                        <div class="col-md-6 mb-4">
-                            <div class="card h-100">
-                                <div class="card-body">
-                                    <div class="row">
-                                        <div class="upcard text-center">
-                                            <h2 style="font-weight: bolder; font-size: 1.5em;">Любовная магия</h1>
-                                        </div>
-                                        <div style="height:8px; width: 1px;"></div>
-                                        <div class="downcard ">
-                                            <em>
-                                                <h3 class="uslugi" style="font-weight: bold;">Любовный приворот</h3>
-                                            </em>
-                                            <p class="uslugi">(Гармонизация отношений. Устранение ссор и недопонимания в отношениях путем усиления чувств и привязанности. Помогает парам укрепить отношения*)</p>
-
-                                            <em>
-                                                <h3 class="uslugi" style="font-weight: bold;">Белый приворот на любовь</h3>
-                                            </em>
-                                            <p class="uslugi">(Обряд подходит парам, между которыми ранее были отношения. Обряд формирует наиболее естественные чувства, набирает силу постепенно и действует мягко, без побочных эффектов*)</p>
-
-                                            <em>
-                                                <h3 class="uslugi" style="font-weight: bold;">Сексуальный приворот</h3>
-                                            </em>
-                                            <p class="uslugi">(Вызывает сильнейшее сексуальное желание, подходит парам, которые хотят добавить в отношения страсть*)</p>
-
-                                            <em>
-                                                <h3 class="uslugi" style="font-weight: bold;">Егильет</h3>
-                                            </em>
-                                            <p class="uslugi">(Обряд делает невозможным измену в физическом плане*)</p>
-
-                                            <em>
-                                                <h3 class="uslugi" style="font-weight: bold;">Черный приворот</h3>
-                                            </em>
-                                            <p class="uslugi">(Черный приворот способный помочь даже в самой сложной и безвыходной ситуации. Обряд вызывает сильнейшие любовные чувства и непреодолимое желание быть с человеком к которому делается приворот. Дает ощутимый результат в короткие сроки*)</p>
-
-                                            <em>
-                                                <h3 class="uslugi" style="font-weight: bold;">Петля рабства</h3>
-                                            </em>
-                                            <p class="uslugi">(Сильный приворот, который подавляет волю и полностью подчиняет человека*)</p>
-
-                                            <em>
-                                                <h3 class="uslugi" style="font-weight: bold;">Обряд на счастливый брак</h3>
-                                            </em>
-                                            <p class="uslugi">(Ритуал белой магии, который помогает удачно выйти замуж или женится*)</p>
-
-                                            <em>
-                                                <h3 class="uslugi" style="font-weight: bold;">Отворот</h3>
-                                            </em>    
-                                            <p class="uslugi">(Обряд позволяющий полностью устранить соперника или соперницу. Вызывает ссоры и разрушает отношения*)</p>
-
-                                            <div class="upcard text-center pt-3 pb-3">
-                                                <h2 style="font-weight: bolder; font-size: 1.5em;">Магия для бизнеса</h1>
-                                            </div>
-
-                                            <em>
-                                                <h3 class="uslugi" style="font-weight: bold;">Обряд на успешную торговлю</h3>
-                                            </em>    
-                                            <p class="uslugi">(Помогает поднять убыточный бизнес связанный с торговлей, увеличивает поток клиентов*)</p>
-
-                                            <em>
-                                                <h3 class="uslugi" style="font-weight: bold;">Открытие денежного канала</h3>
-                                            </em>    
-                                            <p class="uslugi">(Сильный обряд денежной магии, в результате которого деньги начинают приходить из разных источников*)</p>
-
-                                            <em>
-                                                <h3 class="uslugi" style="font-weight: bold;">Ритуал на удачу в делах</h3>
-                                            </em>
-                                            <p class="uslugi">(Привлечения удачи в бизнесе и делах, подходит начинающим предпринимателям*)</p>
-
-                                            <div class="upcard text-center pt-3 pb-3">
-                                                <h2 style="font-weight: bolder; font-size: 1.5em;">Снятие негативного воздействия*</h1>
-                                            </div>
-                                          
-
-                                            <em>
-                                                <h3 class="uslugi" style="font-weight: bold;">Снятие негативного воздействия*</h3>
-                                            </em>
-                                            <p class="uslugi">Снятие порчи, сглаза (Сильнейшие чистки и отливки через воск, снятие порчи, сглаза, негативного воздействия*)</p>       
-
-                                            <em>
-                                                <h3 class="uslugi" style="font-weight: bold;">Снятие венца безбрачия*</h3>
-                                            </em>
-                                            <p class="uslugi">(Выявление и снятие венца безбрачия и препятствий на пути к заключению брака*)</p>   
-
-                                            <em>
-                                                <h3 class="uslugi" style="font-weight: bold;">Снятие родового проклятия*</h3>
-                                            </em>
-                                            <p class=" uslugi">(Устранения родовых проклятий любой силы и давности, негативной кармы*)</p>
-
-                                            <em>
-                                                <h3 class="uslugi" style="font-weight: bold;">Устранения подселения*</h3>
-                                            </em>
-                                            <p class=" uslugi">(Изгнание подселенцев, сущностей, духов*)</p>
-
-                                            <div class="upcard text-center pt-3 pb-3">
-                                                <h2 style="font-weight: bolder; font-size: 1.5em;">Защита для семьи и дома</h1>
-                                            </div>
-          
-                                            <em>
-                                                <h3 class="uslugi" style="font-weight: bold;">Защита для семьи и дома*</h3>
-                                            </em>
-                                            <p class=" uslugi">(Укрепление защиты, чтобы твои близкие могли спать спокойно в объятиях безопасности, преградив вход в свой дом для темных сущностей и недобрых духов*)</p>
-
-                                            <em>
-                                                <h3 class="uslugi" style="font-weight: bold;">Зеркальная защита*</h3>
-                                            </em>
-                                            <p class=" uslugi">(Защита от целенаправленных магических атак. Любой негативный посыл будет возвращен врагу*)</p>
-
-                                            <em>
-                                                <h3 class="uslugi" style="font-weight: bold;">Защита семьи*</h3>
-                                            </em>
-                                            <p class=" uslugi">(Обряд на защиту от завистников и соперников (соперниц) пытающихся разрушить семью*)</p>
-
-                                            <em>
-                                                <h3 class="uslugi" style="font-weight: bold;">Защита на бизнес*</h3>
-                                            </em>
-                                            <p class="uslugi">(Защита бизнеса от посягательств конкурентов, магических атак и любого другого негативного влияния*)</p>
-                                        </div>                                                                      
+                                <div class="row justify-content-center">
+                                    <div class="col-12 text-center">
+                                        <span class="card-text">+38 (093) 235-63-39</span>
+                                    </div>
+                                </div>
+                                <div class="row justify-content-center">
+                                    <div class="col-12 text-center">
+                                        <a href="mailto:karimmag4@gmail.com"><span class="card-text">karimmag4@gmail.com</span></a>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+
+                    <div class="col-md-6 mb-4">
+                        <div class="card h-100">
+                            <div class="dark-overlay"></div>
+                            <img src="pic/co1.jpg" class="card-img-top" alt="...">
+                        </div>
+                    </div>
                 </div>
-            </section>
-        </div>
-
-
-        <div class="container line">
-            <div class="row justify-content-center"> 
-                <img src="pic/line.png" alt="" class="separator-image" style="width:300px; height: auto;">
             </div>
-        </div>
+        </section>
+    </div>
 
-        <div id="prem" class="section">
-            <section class="jumbotron grad">
-                <div class="container-fluid p-0">
-                    <div class="row">
-                        <div class="upcard text-center">
-                            <h1 class="pb-4" style="font-size: 28px; font-weight: bold;">Преимущества</h1>
-                        </div>                    
-                        <div class="col-md-6 mb-4">
-                            <div class="card h-100">
-                                <div class="dark-overlay"></div>
-                                <img src="pic/p2.jpg" class="card-img-top" alt="...">
+    <div class="grad" style="height: 50px;"></div>
+
+    <div class="container line">
+        <div class="row justify-content-center grad"> 
+            <img src="pic/line.png" alt="" class="separator-image" style="width:300px; height: auto;">
+        </div>
+    </div>
+
+
+
+<!--                         -->
+
+    <div id="me" class="section">
+        <section class="jumbotron grad">
+            <div class="container-fluid p-0">
+                <div class="row">
+                    <div class="col-md-6 mb-4">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="upcard text-center">
+                                        <h1>Моя биография</h1>
+                                    </div>
+                                    <div class="downcard ">
+                                        <p class="byanlign">Я — эксперт в области Западноевропейской Высшей Черной Магии, Славянской Черной Магии и Чернокнижия. Как автор книг и статей о магии, я предоставляю непревзойденные знания и опыт. В моей практике используются проверенные временем обряды Черной Магии, переданные мне по наследству.</p>
+                                        <p class="byanlign">Мой реальный опыт работы с людьми превышает 10 лет, из которых 5 лет — это период открытой дистанционной работы через интернет, что подтверждается долговечностью моего веб-сайта.</p>
+                                        <p class="byanlign">Я провел многие годы, практикуя в этой традиции, совершенствуя свое мастерство и разрабатывая уникальные техники. В своем стремлении к разнообразию я также изучал другие магические традиции, такие как ведическая магия и церемониальная ритуальная магия. Мои навыки были отточены годами практики, и я посвятил свою жизнь магическому искусству, что делает меня намного более эффективным, чем самоучки в магии. Мое мастерство гарантирует качественные результаты, не нанося вреда человеку, в отличие от многих дилетантов в этой области.</p>
+
+                                    </div>                                                                      
+                                </div>  
+                            </div>                            
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-4a pb-4">
+                        <div class="row justify-content-center">
+                            <a href="#" class="btn btn-transparent-white btn-lg" data-toggle="modal" data-target="#exampleModal">Написать мне</a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-4 pt-4">
+                        <div class="card h-100">
+                            <div class="dark-overlay"></div>
+                            <img src="pic/p3.jpg" class="card-img-top" alt="..."> <!--  second -->
+                        </div>
+                    </div>                    
+                </div>
+            </div>
+        </section>
+    </div>
+
+
+
+    <div class="container line">
+        <div class="row justify-content-center grad"> 
+            <img src="pic/line.png" alt="" class="separator-image" style="width:300px; height: auto;">
+        </div>
+    </div>
+
+    <div class="air grad"></div>
+
+    <div class="col-md-6 mb-4">
+        <div class="card h-100">
+            <div class="dark-overlay"></div>
+            <img src="pic/ut.jpg" class="card-img-top" alt="...">
+        </div>
+    </div> 
+    <div class="container line">
+        <div class="row justify-content-center grad"> 
+            <h1 class="pt-3" style=" font-size:28px; ">Услуги</h1>
+        </div>
+    </div>
+
+    <div id="job" class="section">
+        <section class="jumbotron grad">
+            <div class="container-fluid p-0">
+                <div class="row">
+                    <div class="col-md-6 mb-4">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="upcard text-center">
+                                        <h2 style="font-weight: bolder; font-size: 1.5em;">Любовная магия</h1>
+                                    </div>
+                                    <div style="height:8px; width: 1px;"></div>
+                                    <div class="downcard ">
+                                        <em>
+                                            <h3 class="uslugi" style="font-weight: bold;">Любовный приворот</h3>
+                                        </em>
+                                        <p class="uslugi">(Гармонизация отношений. Устранение ссор и недопонимания в отношениях путем усиления чувств и привязанности. Помогает парам укрепить отношения*)</p>
+
+                                        <em>
+                                            <h3 class="uslugi" style="font-weight: bold;">Белый приворот на любовь</h3>
+                                        </em>
+                                        <p class="uslugi">(Обряд подходит парам, между которыми ранее были отношения. Обряд формирует наиболее естественные чувства, набирает силу постепенно и действует мягко, без побочных эффектов*)</p>
+
+                                        <em>
+                                            <h3 class="uslugi" style="font-weight: bold;">Сексуальный приворот</h3>
+                                        </em>
+                                        <p class="uslugi">(Вызывает сильнейшее сексуальное желание, подходит парам, которые хотят добавить в отношения страсть*)</p>
+
+                                        <em>
+                                            <h3 class="uslugi" style="font-weight: bold;">Егильет</h3>
+                                        </em>
+                                        <p class="uslugi">(Обряд делает невозможным измену в физическом плане*)</p>
+
+                                        <em>
+                                            <h3 class="uslugi" style="font-weight: bold;">Черный приворот</h3>
+                                        </em>
+                                        <p class="uslugi">(Черный приворот способный помочь даже в самой сложной и безвыходной ситуации. Обряд вызывает сильнейшие любовные чувства и непреодолимое желание быть с человеком к которому делается приворот. Дает ощутимый результат в короткие сроки*)</p>
+
+                                        <em>
+                                            <h3 class="uslugi" style="font-weight: bold;">Петля рабства</h3>
+                                        </em>
+                                        <p class="uslugi">(Сильный приворот, который подавляет волю и полностью подчиняет человека*)</p>
+
+                                        <em>
+                                            <h3 class="uslugi" style="font-weight: bold;">Обряд на счастливый брак</h3>
+                                        </em>
+                                        <p class="uslugi">(Ритуал белой магии, который помогает удачно выйти замуж или женится*)</p>
+
+                                        <em>
+                                            <h3 class="uslugi" style="font-weight: bold;">Отворот</h3>
+                                        </em>    
+                                        <p class="uslugi">(Обряд позволяющий полностью устранить соперника или соперницу. Вызывает ссоры и разрушает отношения*)</p>
+
+                                        <div class="upcard text-center pt-3 pb-3">
+                                            <h2 style="font-weight: bolder; font-size: 1.5em;">Магия для бизнеса</h1>
+                                        </div>
+
+                                        <em>
+                                            <h3 class="uslugi" style="font-weight: bold;">Обряд на успешную торговлю</h3>
+                                        </em>    
+                                        <p class="uslugi">(Помогает поднять убыточный бизнес связанный с торговлей, увеличивает поток клиентов*)</p>
+
+                                        <em>
+                                            <h3 class="uslugi" style="font-weight: bold;">Открытие денежного канала</h3>
+                                        </em>    
+                                        <p class="uslugi">(Сильный обряд денежной магии, в результате которого деньги начинают приходить из разных источников*)</p>
+
+                                        <em>
+                                            <h3 class="uslugi" style="font-weight: bold;">Ритуал на удачу в делах</h3>
+                                        </em>
+                                        <p class="uslugi">(Привлечения удачи в бизнесе и делах, подходит начинающим предпринимателям*)</p>
+
+                                        <div class="upcard text-center pt-3 pb-3">
+                                            <h2 style="font-weight: bolder; font-size: 1.5em;">Снятие негативного воздействия*</h1>
+                                        </div>
+                                      
+
+                                        <em>
+                                            <h3 class="uslugi" style="font-weight: bold;">Снятие негативного воздействия*</h3>
+                                        </em>
+                                        <p class="uslugi">Снятие порчи, сглаза (Сильнейшие чистки и отливки через воск, снятие порчи, сглаза, негативного воздействия*)</p>       
+
+                                        <em>
+                                            <h3 class="uslugi" style="font-weight: bold;">Снятие венца безбрачия*</h3>
+                                        </em>
+                                        <p class="uslugi">(Выявление и снятие венца безбрачия и препятствий на пути к заключению брака*)</p>   
+
+                                        <em>
+                                            <h3 class="uslugi" style="font-weight: bold;">Снятие родового проклятия*</h3>
+                                        </em>
+                                        <p class=" uslugi">(Устранения родовых проклятий любой силы и давности, негативной кармы*)</p>
+
+                                        <em>
+                                            <h3 class="uslugi" style="font-weight: bold;">Устранения подселения*</h3>
+                                        </em>
+                                        <p class=" uslugi">(Изгнание подселенцев, сущностей, духов*)</p>
+
+                                        <div class="upcard text-center pt-3 pb-3">
+                                            <h2 style="font-weight: bolder; font-size: 1.5em;">Защита для семьи и дома</h1>
+                                        </div>
+      
+                                        <em>
+                                            <h3 class="uslugi" style="font-weight: bold;">Защита для семьи и дома*</h3>
+                                        </em>
+                                        <p class=" uslugi">(Укрепление защиты, чтобы твои близкие могли спать спокойно в объятиях безопасности, преградив вход в свой дом для темных сущностей и недобрых духов*)</p>
+
+                                        <em>
+                                            <h3 class="uslugi" style="font-weight: bold;">Зеркальная защита*</h3>
+                                        </em>
+                                        <p class=" uslugi">(Защита от целенаправленных магических атак. Любой негативный посыл будет возвращен врагу*)</p>
+
+                                        <em>
+                                            <h3 class="uslugi" style="font-weight: bold;">Защита семьи*</h3>
+                                        </em>
+                                        <p class=" uslugi">(Обряд на защиту от завистников и соперников (соперниц) пытающихся разрушить семью*)</p>
+
+                                        <em>
+                                            <h3 class="uslugi" style="font-weight: bold;">Защита на бизнес*</h3>
+                                        </em>
+                                        <p class="uslugi">(Защита бизнеса от посягательств конкурентов, магических атак и любого другого негативного влияния*)</p>
+                                    </div>                                                                      
+                                </div>
                             </div>
-                        </div>  
-                        <div class="col-md-6 mb-4">
-                            <div class="card h-100">
-                                <div class="card-body">
-                                    <div class="row">
-                                        <div class="downcard ">
-                                            <p class="byanlign">Возможность срочной консультации по аудио или видеосвязи в любое время.</p>
-                                            <p class="byanlign">Помощь в сложных случаях.</p>
-                                            <p class="byanlign">Оказываю помощь как лично так и дистанционно.</p>
-                                            <p class="byanlign">Работа под реальным именем и контактами, которые не менялись за всё время практики.</p>
-                                            <p class="byanlign">Ощутимый и качественный эффект от работы в установленный срок.*</p>
-                                            <p class="byanlign">Фотоотчет проводимой работы.</p>
-                                            <p class="byanlign">Индивидуальный подход к каждому вопросу.</p>
-                                        </div>                                                                      
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+
+    <div class="container line">
+        <div class="row justify-content-center grad"> 
+            <img src="pic/line.png" alt="" class="separator-image" style="width:300px; height: auto;">
+        </div>
+    </div>
+
+    <div id="prem" class="section">
+        <section class="jumbotron grad">
+            <div class="container-fluid p-0">
+                <div class="row">
+                    <div class="upcard text-center">
+                        <h1 class="pb-4" style="font-size: 28px; font-weight: bold;">Преимущества</h1>
+                    </div>                    
+                    <div class="col-md-6 mb-4">
+                        <div class="card h-100">
+                            <div class="dark-overlay"></div>
+                            <img src="pic/p2.jpg" class="card-img-top" alt="...">
+                        </div>
+                    </div>  
+                    <div class="col-md-6 mb-4">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="downcard ">
+                                        <p class="byanlign">Возможность срочной консультации по аудио или видеосвязи в любое время.</p>
+                                        <p class="byanlign">Помощь в сложных случаях.</p>
+                                        <p class="byanlign">Оказываю помощь как лично так и дистанционно.</p>
+                                        <p class="byanlign">Работа под реальным именем и контактами, которые не менялись за всё время практики.</p>
+                                        <p class="byanlign">Ощутимый и качественный эффект от работы в установленный срок.*</p>
+                                        <p class="byanlign">Фотоотчет проводимой работы.</p>
+                                        <p class="byanlign">Индивидуальный подход к каждому вопросу.</p>
+                                    </div>                                                                      
+                                </div>
+                            </div>
+                        </div>
+                    </div>  
+                </div>
+            </div>
+        </section>
+    </div>
+
+
+    <div id="foot" class="section d-flex" style="background-color: #000000;">
+        <section class="jumbotron" style="">
+            <div class="container-fluid p-0">
+                <div class="row">
+                    <div class="col-md-6 mb-4">
+                        <div class="card h-100 chover">
+                            <div class="card-body">
+                                <div class="row text-center social-container">
+                                    <div class="col-4 mb-3">
+                                        <div class="social d-flex flex-column align-items-center">
+                                            <a class="social-icon-link viber" href="https://tinyurl.com/4vmypddb">
+                                                <img src="pic/icon-viber.png" alt="" width="42px" height="42px">
+                                                <span class="highlight-circle viber"></span>
+                                            </a>
+                                            <span class="card-text">Viber</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-4 mb-3">
+                                        <div class="social d-flex flex-column align-items-center">
+                                            <a class="social-icon-link whatsapp" href="https://api.whatsapp.com/send?phone=380932356339">
+                                                <img src="pic/icon-whatsapp.png" alt="" width="42px" height="42px">
+                                                <span class="highlight-circle whatsapp"></span>
+                                            </a>
+                                            <span class="card-text">Whatsapp</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-4 mb-3">
+                                        <div class="social d-flex flex-column align-items-center">
+                                            <a class="social-icon-link telegram" href="https://t.me/Mag_karim">
+                                                <img src="pic/icon-telegram.png" alt="" width="42px" height="42px">
+                                                <span class="highlight-circle telegram"></span>
+                                            </a>
+                                            <span class="card-text">Telegram</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row justify-content-center">
+                                    <div class="col-12 text-center">
+                                        <span class="card-text">+38 (093) 235-63-39</span>
+                                    </div>
+                                </div>
+                                <div class="row justify-content-center">
+                                    <div class="col-12 text-center">
+                                        <a href="mailto:karimmag4@gmail.com"><span class="card-text">karimmag4@gmail.com</span></a>
                                     </div>
                                 </div>
                             </div>
-                        </div>  
-                    </div>
+                        </div>
+                    </div>           
                 </div>
-            </section>
-        </div>
-
-
-        <div id="foot" class="section d-flex" style="background-color: #000000;">
-            <section class="jumbotron">
-                <div class="container-fluid p-0">
-                    <div class="row">
-                        <div class="col-md-6 mb-4">
-                            <div class="card h-100 chover">
-                                <div class="card-body">
-                                    <div class="row text-center social-container">
-                                        <div class="col-4 mb-3">
-                                            <div class="social d-flex flex-column align-items-center">
-                                                <a class="social-icon-link viber" href="https://tinyurl.com/4vmypddb">
-                                                    <img src="pic/icon-viber.png" alt="" width="42px" height="42px">
-                                                    <span class="highlight-circle viber"></span>
-                                                </a>
-                                                <span class="card-text">Viber</span>
-                                            </div>
-                                        </div>
-                                        <div class="col-4 mb-3">
-                                            <div class="social d-flex flex-column align-items-center">
-                                                <a class="social-icon-link whatsapp" href="https://api.whatsapp.com/send?phone=380932356339">
-                                                    <img src="pic/icon-whatsapp.png" alt="" width="42px" height="42px">
-                                                    <span class="highlight-circle whatsapp"></span>
-                                                </a>
-                                                <span class="card-text">Whatsapp</span>
-                                            </div>
-                                        </div>
-                                        <div class="col-4 mb-3">
-                                            <div class="social d-flex flex-column align-items-center">
-                                                <a class="social-icon-link telegram" href="https://t.me/Mag_karim">
-                                                    <img src="pic/icon-telegram.png" alt="" width="42px" height="42px">
-                                                    <span class="highlight-circle telegram"></span>
-                                                </a>
-                                                <span class="card-text">Telegram</span>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="row justify-content-center">
-                                        <div class="col-12 text-center">
-                                            <span class="card-text">+38 (093) 235-63-39</span>
-                                        </div>
-                                    </div>
-                                    <div class="row justify-content-center">
-                                        <div class="col-12 text-center">
-                                            <a href="mailto:karimmag4@gmail.com"><span class="card-text">karimmag4@gmail.com</span></a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>           
-                    </div>
+            </div>
+            <div class="container line pb-4">
+                <div class="row justify-content-center"> 
+                    <img src="pic/rel.jpg" alt="" class="separator-image" style="width:100px; height: auto;">
                 </div>
-                <div class="container line pb-4">
-                    <div class="row justify-content-center"> 
-                        <img src="pic/rel.jpg" alt="" class="separator-image" style="width:100px; height: auto;">
-                    </div>
-                </div>
+            </div>
 
 
-                <div class="container">
-                    <div class="ml-auto mt-2">
-                        <h5></h5>
-                        <p class="font-red byanlign">* Я не могу дать гарантию помощи без ознакомления с ситуацией. Любая магическая работа, проводится только после предварительной диагностики, в процессе которой определяется сложность, шансы на успех и сроки выполнения работы. Результаты работы индивидуальны и могут отличаться в каждом отдельном случае.</p>
-                    </div>
-                </div>
-
-            </section>
-        </div>   
-
-
-
-        <div class="transparent-white-line"></div>
-
-
-        <footer class="text-center py-4" style="background-color: #000000;">
             <div class="container">
-                <p style="font-weight: bold;">&copy;Copyright 2018-2024</p>
-            </div>
-        </footer>
-
-        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-header bfon">
-                        <h5 class="modal-title" id="exampleModalLabel">Введите ваши данные</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body bfon">
-                        <form action="Contact.php" method="post">
-                            <div class="form-group">
-                                <label for="name">Имя</label>
-                                <input type="text" class="form-control" id="name" name="name" placeholder="Введите ваше имя">
-                            </div>
-                            <div class="form-group">
-                                <label for="email">Email</label>
-                                <input type="email" class="form-control" id="email" name="email" placeholder="Введите ваш email">
-                            </div>
-                            <div class="form-group">
-                                <label for="phone">Номер телефона</label>
-                                <input type="tel" class="form-control" id="phone" name="phone" placeholder="Введите ваш номер телефона">
-                            </div>
-                            <div class="modal-footer bfon">
-                                <button type="submit" class="btn btn-transparent-white btn-lg">Отправить</button>
-                            </div>
-                        </form>
-                    </div>
-
+                <div class="ml-auto mt-2">
+                    <h5></h5>
+                    <p class="font-red byanlign">* Я не могу дать гарантию помощи без ознакомления с ситуацией. Любая магическая работа, проводится только после предварительной диагностики, в процессе которой определяется сложность, шансы на успех и сроки выполнения работы. Результаты работы индивидуальны и могут отличаться в каждом отдельном случае.</p>
                 </div>
+            </div>
+
+        </section>
+    </div>   
+
+
+
+    <div class="transparent-white-line"></div>
+
+
+    <footer class="text-center py-4" style="background-color: #000000;">
+        <div class="container">
+            <p style="font-weight: bold;">&copy;Copyright 2018-2024</p>
+        </div>
+    </footer>
+
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header bfon">
+                    <h5 class="modal-title" id="exampleModalLabel">Введите ваши данные</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body bfon">
+                    <form action="Contact.php" method="post">
+                        <div class="form-group">
+                            <label for="name">Имя</label>
+                            <input type="text" class="form-control" id="name" name="name" placeholder="Введите ваше имя">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" class="form-control" id="email" name="email" placeholder="Введите ваш email">
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Номер телефона</label>
+                            <input type="tel" class="form-control" id="phone" name="phone" placeholder="Введите ваш номер телефона">
+                        </div>
+                        <div class="modal-footer bfon">
+                            <button type="submit" class="btn btn-transparent-white btn-lg">Отправить</button>
+                        </div>
+                    </form>
+                </div>
+
             </div>
         </div>
     </div>
