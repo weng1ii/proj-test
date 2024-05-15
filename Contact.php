@@ -4,10 +4,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = $_POST['email'];
     $phone = $_POST['phone'];
     
-    $to = 'shandabylosasha@gmail.com'; // Замените на ваш email
+    $to = 'karimmag4@gmail.com'; // Замените на ваш email
     $subject = 'Новое сообщение с сайта';
     $message = "Имя: $name\nEmail: $email\nНомер телефона: $phone";
-    $headers = 'From: shandabylosasha@gmail.com'; // Замените на ваш email
+    $headers = 'From: karimmag4@gmail.com'; // Замените на ваш email
 
     if (mail($to, $subject, $message, $headers)) {
         echo '<script>alert("Сообщение успешно отправлено!");</script>';
