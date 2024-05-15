@@ -327,7 +327,7 @@
                                 <div class="row text-center social-container">
                                     <div class="col-4 mb-3">
                                         <div class="social d-flex flex-column align-items-center">
-                                            <a class="social-icon-link viber" href="#">
+                                            <a class="social-icon-link viber" href="https://tinyurl.com/4vmypddb">
                                                 <img src="pic/icon-viber.png" alt="" width="42px" height="42px">
                                                 <span class="highlight-circle viber"></span>
                                             </a>
@@ -336,7 +336,7 @@
                                     </div>
                                     <div class="col-4 mb-3">
                                         <div class="social d-flex flex-column align-items-center">
-                                            <a class="social-icon-link whatsapp" href="#">
+                                            <a class="social-icon-link whatsapp" href="https://api.whatsapp.com/send?phone=380932356339">
                                                 <img src="pic/icon-whatsapp.png" alt="" width="42px" height="42px">
                                                 <span class="highlight-circle whatsapp"></span>
                                             </a>
@@ -345,7 +345,7 @@
                                     </div>
                                     <div class="col-4 mb-3">
                                         <div class="social d-flex flex-column align-items-center">
-                                            <a class="social-icon-link telegram" href="#">
+                                            <a class="social-icon-link telegram" href="https://t.me/Mag_karim">
                                                 <img src="pic/icon-telegram.png" alt="" width="42px" height="42px">
                                                 <span class="highlight-circle telegram"></span>
                                             </a>
@@ -361,7 +361,7 @@
                                 </div>
                                 <div class="row justify-content-center">
                                     <div class="col-12 text-center">
-                                        <span class="card-text">karimmag4@gmail.com</span>
+                                        <a href="mailto:karimmag4@gmail.com"><span class="card-text">karimmag4@gmail.com</span></a>
                                     </div>
                                 </div>
                             </div>
@@ -410,7 +410,12 @@
                             </div>                            
                         </div>
                     </div>
-                    <div class="col-md-6 mb-4">
+                    <div class="col-md-6 mb-4a pb-4">
+                        <div class="row justify-content-center">
+                            <a href="#" class="btn btn-transparent-white btn-lg" data-toggle="modal" data-target="#exampleModal">Написать мне</a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-4 pt-4">
                         <div class="card h-100">
                             <div class="dark-overlay"></div>
                             <img src="pic/co1.jpg" class="card-img-top" alt="...">
@@ -420,6 +425,8 @@
             </div>
         </section>
     </div>
+
+
 
     <div class="container line pb-3">
         <div class="row justify-content-center"> 
@@ -621,7 +628,7 @@
                                 <div class="row text-center social-container">
                                     <div class="col-4 mb-3">
                                         <div class="social d-flex flex-column align-items-center">
-                                            <a class="social-icon-link viber" href="#">
+                                            <a class="social-icon-link viber" href="https://tinyurl.com/4vmypddb">
                                                 <img src="pic/icon-viber.png" alt="" width="42px" height="42px">
                                                 <span class="highlight-circle viber"></span>
                                             </a>
@@ -630,7 +637,7 @@
                                     </div>
                                     <div class="col-4 mb-3">
                                         <div class="social d-flex flex-column align-items-center">
-                                            <a class="social-icon-link whatsapp" href="#">
+                                            <a class="social-icon-link whatsapp" href="https://api.whatsapp.com/send?phone=380932356339">
                                                 <img src="pic/icon-whatsapp.png" alt="" width="42px" height="42px">
                                                 <span class="highlight-circle whatsapp"></span>
                                             </a>
@@ -655,7 +662,7 @@
                                 </div>
                                 <div class="row justify-content-center">
                                     <div class="col-12 text-center">
-                                        <span class="card-text">karimmag4@gmail.com</span>
+                                        <a href="mailto:karimmag4@gmail.com"><span class="card-text">karimmag4@gmail.com</span></a>
                                     </div>
                                 </div>
                             </div>
@@ -694,55 +701,35 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header bfon">
+                    <h5 class="modal-title" id="exampleModalLabel">Введите ваши данные</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
                 </div>
                 <div class="modal-body bfon">
-                    <div class="row text-center">
-                        <div class="col-6 mb-3">
-                            <div class="social d-flex flex-column align-items-center">
-                                <a class="social-icon-link viber" href="#">
-                                    <img src="pic/icon-viber.png" alt="" width="42px" height="42px">                                               
-                                    <span class="highlight-circle viber"></span> 
-                                </a>
-                                <span class="card-text">Viber</span>
-                            </div>
-
+                    <form action="Contact.php" method="post">
+                        <div class="form-group">
+                            <label for="name">Имя</label>
+                            <input type="text" class="form-control" id="name" name="name" placeholder="Введите ваше имя">
                         </div>
-                        <div class="col-6 mb-3">
-                            <div class="social d-flex flex-column align-items-center">
-                                <a class="social-icon-link whatsapp" href="#">
-                                    <img src="pic/icon-whatsapp.png" alt="" width="42px" height="42px">
-                                    <span class="highlight-circle whatsapp"></span>                                              
-                                </a>
-                                <span class="card-text">Whatsapp</span>
-                            </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" class="form-control" id="email" name="email" placeholder="Введите ваш email">
                         </div>
-                    </div>
-                    <div class="row justify-content-center">
-                        <div class="social d-flex flex-column align-items-center justify-content-center">
-                            <a class="social-icon-link telegram" href="#">
-                                <img src="pic/icon-telegram.png" alt="" width="42px" height="42px">
-                                <span class="highlight-circle telegram"></span>                                               
-                            </a>
-                            <span class="card-text">Telegram</span>
+                        <div class="form-group">
+                            <label for="phone">Номер телефона</label>
+                            <input type="tel" class="form-control" id="phone" name="phone" placeholder="Введите ваш номер телефона">
                         </div>
-                    </div>
-                    <div class="row justify-content-center">
-                        <div class="col-12 text-center">
-                            <span class="card-text">+38 (063) 561-32-99</span>
+                        <div class="modal-footer bfon">
+                            <button type="submit" class="btn btn-transparent-white btn-lg">Отправить</button>
                         </div>
-                    </div>
-                    <div class="row justify-content-center">
-                        <div class="col-12 text-center">
-                            <span class="card-text">veleyara.vedma@gmail.com</span>
-                        </div>
-                    </div>
-
+                    </form>
                 </div>
-                <div class="modal-footer bfon">
-                </div>
+
             </div>
         </div>
     </div>
+
     
   
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
